@@ -1,0 +1,8 @@
+env/
+__pycache__/
+
+.env
+
+dev_requirements.txt
+
+run.sh

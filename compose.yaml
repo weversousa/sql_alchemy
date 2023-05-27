@@ -1,0 +1,19 @@
+version: '3.9'
+
+networks:
+  database_network:
+    name: database_network
+    external: false
+
+services:
+  database_service:
+    image: mysql:8.0.32
+    container_name: database_service
+    networks:
+      - db_network
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_HOST=${MYSQL_ROOT_HOST}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
